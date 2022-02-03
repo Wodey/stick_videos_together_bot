@@ -1,7 +1,7 @@
 from pytube import YouTube, Playlist
 
 
-class Video_Downloader:
+class VideoDownloader:
     def __init__(self):
         self.counter = 0
 
@@ -21,5 +21,5 @@ class Video_Downloader:
 
 
 if __name__ == "__main__":
-    v_c = Video_Downloader()
+    v_c = VideoDownloader()
     v_c.download_playlist("https://www.youtube.com/playlist?list=PLN2WeTFVM_p5x79B6n2-09BQYNPP4WdZq")
