@@ -1,16 +1,19 @@
-# This is a sample Python script.
+from VideoMerger import VideoMerger
+from VideoUploader import VideoUploader
+from VideoDownloader import VideoDownloader
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+video_downloader = VideoDownloader()
+
+uri = input("Send link on playlist or video: ")
+
+if "playlist" in uri:
+    video_downloader.download_playlist(uri)
+else:
+    video_downloader.download_video(uri)
+
+video_merger = VideoMerger()
+
+video_merger.merge_videos(video_downloader.counter)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
